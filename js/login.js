@@ -61,4 +61,15 @@ $(function(){
 			}
 		})
 	});
+
+	$(".user-exit").click(function(){
+		var url=$.urls.user_logout_url;
+		$.network.network_get({
+			url:url,
+			success:function(res){
+				console.log(res.msg);
+				window.location.reload();
+			}
+		})
+	});
 });
