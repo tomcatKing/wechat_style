@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+	<meta charset="UTF-8">
+	<title>Home</title>
+	<link rel="stylesheet" type="text/css" href="css/login.css"/>
+	<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	<link rel="stylesheet" type="text/css" href="css/food_detail.css"/>
+	<link rel="stylesheet" type="text/css" href="css/order.css"/>
+	<script type="text/javascript" src="js/man.js"></script>
+	<script type="text/javascript" src="js/network.js"></script>
+	<script type="text/javascript" src="js/url.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/login.js"></script>
+	<script type="text/javascript" src="js/util.js"></script>
+	<script type="text/javascript" src="js/food.js"></script>
+	<script type="text/javascript" src="js/order.js"></script>
+</head>
+<body>
+	<div class="header">
+		<div class="title">微信小程序后台管理页面</div>
+		<div class="user-info">
+			<text class="user-name">欢迎</text>
+			<text>退出</text>
+		</div>
+	</div>
+	<div class="body" id="login" style="display: none">
+		<div class="login-body">
+	        <div class="user-con">
+	            <div class="user-title">用户登录</div>
+	            <div class="user-box">
+	               <label class="user-label" for="username"><img src="img/用户.png"/></label>
+	               <input type="text" class="user-content" id="username" placeholder="请输入用户名"/>  
+	            </div>
+	            <div class="user-box">
+	               <label class="user-label" for="password"><img src="img/密码.png"/></label>
+	               <input type="text" class="user-content" id="password" placeholder="请输入验证码"/>  
+	               <div class="getcode">获取验证码</div>
+	            </div>
+	            <div class="user-box w">
+				   <div class="login-btn">登录</div>
+	            </div>
+	        </div>
+		</div>
+	</div>
+	<div class="body" id="index" >
+		<div class="nav">
+			<div class="select isTrue" data-type="food-context">美味管理</div>
+			<div class="select " data-type="order-context">订单管理</div>
+		</div>
+		<div class="food-context" >
+			<div class="inner-body">
+				<div class="food-title">
+					<div class="inner-title">美味管理</div>
+					<div class="food-add">添加商品</div>
+				</div>
+				<div class="search-body">
+					<input type="text" class="food-sh-text" value="" placeholder="请输入美食名称"/>
+					<input type="button" class="sh-btn food-sh-btn" value="查询"/>
+				</div>
+
+				<div class="table-body">
+					<table class="food-table">
+					</table>
+				</div>
+
+				<div class="select-num">
+					<span class="prev_food">上一页</span>
+					<a href="#" class="pageStart">1</a>
+					<text>...</text>
+					<a href="#" class="pageEnd">468</a>
+					<span class="next_food">下一页</span>
+				</div>
+			</div>
+
+		</div>
+		<div class="order-context" style="display: none">
+			<div class="inner-body">
+				<div class="order-title">订单管理</div>
+				
+				<div class="search-body">
+					<input type="text" class="order-sh-text" value="" placeholder="请输入订单号"/>
+					<input type="button" class="sh-btn order-sh-btn" value="查询"/>
+				</div>
+
+				<div class="table-body ">
+					<table class="order-table">
+					</table>
+				</div>
+
+				<div class="select-num">
+					<span class="prev_order">上一页</span>
+					<a href="#" class="order-pageStart">1</a>
+					<text>...</text>
+					<a href="#" class="order-pageEnd">468</a>
+					<span class="next_order">下一页</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+
+	<!--商品详情-->
+	<div class="food-detail" style="display: none;">
+		
+	</div>
+	
+	<!--商品管理--修改商品-->
+	<div class="food-manager food-edit-manager" style="display: none">
+		
+	</div>
+	
+	<!--商品管理--添加商品-->
+	<div class="food-manager food-add-manager" style="display: none">
+		<div class="food-manager-title">商品管理--添加商品</div>
+		<div class="food-manager-item">
+			<div class="food-manager-item-txt">商品名称</div>	
+			<div class="food-manager-item-input">
+				<input type="text" class="add_food_name" value="" placeholder="请输入商品名称" />
+			</div>
+		</div>
+
+		<div class="food-manager-item">
+			<div class="food-manager-item-txt">商品描述</div>	
+			<div class="food-manager-item-input">
+				<input type="text" class="add_food_detail" value="该美食无法用语言描述" placeholder="请输入商品描述" />
+			</div>
+		</div>
+
+		<div class="food-manager-item">
+			<div class="food-manager-item-txt">商品价格</div>	
+			<div class="food-manager-item-input">
+				<input type="number" min="1" max="100" value="" class="add_food_price" placeholder="请输入商品价格" />
+			</div>
+		</div>
+
+		<div class="food-manager-item">
+			<div class="food-manager-item-txt">商品图片</div>	
+			<div class="food-manager-item-input">
+				<input type="text" class="add_food_img" value="" placeholder="请输入商品图片链接" />
+			</div>
+		</div>
+
+		<div class="food-manager-item">
+			<div class="food-manager-item-txt">商品类型</div>	
+			<div class="food-manager-item-input">
+				<input type="number" class="add_food_type" min="1" max="4" value="" placeholder="对应美食分类:1-甜食,2-瓜果,3-蛋糕,4-饮料" />
+			</div>
+		</div>
+		
+
+		<div class="food-update-btn food-add-btn">添加商品</div>
+		<div class="add-after-btn after-btn">返回上页</div>
+	</div>
+
+	<!--订单详情-->
+	<div class="order-detail" style="display: none"></div>
+
+	
+
+</body>
+</html>

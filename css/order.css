@@ -1,0 +1,70 @@
+.order-detail{
+	width:100%;
+	margin:10px auto;
+	height:600px;
+}
+.order-detail .order-detail-title{
+	margin:0 auto;
+    font-size: 22px;
+    color: #666;
+    padding-left:30px;
+    padding-bottom: 10px;
+}
+.order-detail-line{
+	text-align: center;
+	padding-left:100px;
+	width:400px;
+	height:50px;
+	margin-top:10px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.order-detail-bt{
+	font-weight: bolder;
+	font-size: 18px;
+}
+.order-detail-txt{
+	font-size:16px;
+}
+.order-detail table{
+	margin-left:80px;
+}
+.order-detail tr{
+	width:100%;
+	box-sizing: border-box;
+}
+.order-detail tr th{
+	padding:10px 10px;
+	width:160px;
+	height:20px;
+	border-left:1px solid #ccc;
+	background-color: #2db7f5;
+	color:#fff;
+}
+.order-detail tr th:last-child{
+	border-left:none;
+	border-right:1px solid #ccc;
+}
+.order-detail tr td{
+	text-align: center;
+	padding:5px 10px;
+	width:160px;
+	height:30px;
+	border-left:1px solid #ccc;
+	color:#fff;
+}
+.order-detail tr td:last-child{
+	border-left:none;
+	border-right:1px solid #ccc;
+}
+.order-detail tr:nth-of-type(odd){
+	background-color: #4cb546;
+}
+.order-detail tr:nth-of-type(even){
+	background-color: #d8a340;
+}
+.order-detail td img{
+	width:100px;
+	height:100px;
+}

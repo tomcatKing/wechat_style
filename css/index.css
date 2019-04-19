@@ -1,0 +1,228 @@
+*{
+	margin:0;
+	padding:0;
+}
+.header{
+	width:100%;
+	height:40px;
+	border-bottom: 1px solid #ccc;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.header .title{
+	padding-left:30px;
+	font-size: 24px;
+	color:#666;
+}
+.header .user-info{
+	padding-right: 30px;
+	font-size:16px;
+	color:#ccc;
+}
+.header .user-info text{
+	padding-right:20px;
+}
+.header .user-info text:last-child{
+	padding:10px 0;
+	color:#62aae8;
+}
+.header .user-info text:last-child:hover{
+	background-color: #ccc;
+}
+.body{
+	width:100%;
+	height:600px;
+	display: flex;
+	justify-content:flex-start; 
+}
+.body .nav{
+	width:100px;
+	height:100%;
+	border-right: 1px solid #ccc;
+	text-align:center;
+}
+.isTrue{
+	background-color: #ccc;
+	color:#fff;
+}
+.nav .select{
+	padding:20px 10px;
+	border-bottom: 1px solid #ccc;
+	cursor: pointer;
+}
+.body .food-context{
+	flex:1;
+}
+.body .order-context{
+	flex:1;
+}
+/**美食部分**/
+.food-context .inner-body{
+	width:96%;
+	margin:0 auto;
+}
+.inner-body .food-title{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding:10px 0;
+}
+.food-title .inner-title{
+	font-size: 28px;
+	color:#666;
+}
+.food-title .food-add{
+	padding:5px 15px;
+	border:1px solid #ccc;
+	background-color: #2db7f5;
+	color:#fff;
+	cursor: pointer;
+}
+.search-body .food-sh-text{
+	width:300px;
+	height:26px;
+	padding-left:10px;
+}
+.food-table tr{
+	width:100%;
+	box-sizing: border-box;
+}
+.food-table tr th{
+	padding:10px 10px;
+	width:200px;
+	height:40px;
+	border-left:1px solid #ccc;
+	background-color: #2db7f5;
+	color:#fff;
+}
+.food-table tr th:last-child{
+	border-left:none;
+	border-right:1px solid #ccc;
+}
+.food-table tr td{
+	text-align: center;
+	padding:10px 10px;
+	width:200px;
+	height:30px;
+	border-left:1px solid #ccc;
+	color:#fff;
+}
+.food-table tr td:last-child{
+	border-left:none;
+	border-right:1px solid #ccc;
+}
+.food-table tr:nth-of-type(odd){
+	background-color: #655f55;
+}
+.food-table tr:nth-of-type(even){
+	background-color: #605c5d;
+}
+.food-context .select-num{
+	text-align: center;
+	margin-top:50px;
+}
+.food-edit{
+	cursor: pointer;
+}
+.food-edit:hover{
+	background-color:#262424;
+}
+.food-show{
+	cursor: pointer;
+}
+.food-show:hover{
+	background-color:#262424;
+}
+
+/**订单部分*/
+.order-context .inner-body{
+	width:96%;
+	margin:0 auto;
+}
+.inner-body .order-title{
+	font-size: 28px;
+	color:#666;
+	padding:10px 0;
+	border-bottom: 1px solid #ccc;
+}
+.inner-body .search-body{
+	padding:10px 0;
+}
+.search-body .order-sh-text{
+	width:300px;
+	height:26px;
+	padding-left:10px;
+}
+.search-body .sh-btn{
+	width:100px;
+	height:26px;
+	background-color: #2db7f5;
+	color:#fff;
+	outline: none;
+	border:1px solid #666;
+}
+.order-table tr{
+	width:100%;
+	box-sizing: border-box;
+}
+.order-table tr th{
+	padding:10px 10px;
+	width:200px;
+	height:40px;
+	border-left:1px solid #ccc;
+	background-color: #2db7f5;
+	color:#fff;
+}
+.order-table tr th:last-child{
+	border-left:none;
+	border-right:1px solid #ccc;
+}
+.order-table tr td{
+	text-align: center;
+	padding:10px 10px;
+	width:200px;
+	height:20px;
+	border-left:1px solid #ccc;
+	color:#fff;
+}
+.order-table tr td:last-child{
+	border-left:none;
+	border-right:1px solid #ccc;
+}
+.order-table tr:nth-of-type(odd){
+	background-color: #8e8768;
+}
+.order-table tr:nth-of-type(even){
+	background-color: #344034;
+}
+.order-context .select-num{
+	text-align: center;
+	margin-top:50px;
+}
+.select-num a{
+	padding:5px 20px;
+	text-decoration: none;
+	border:1px solid #2db7f5;
+	color:#767675;
+}
+span{
+	padding:5px 10px;
+	cursor: pointer;
+	border:1px solid #2db7f5;
+	color:#767675;
+}
+.select-num .pageStart{
+	background-color: #2db7f5;
+	color:#fff;
+}
+.select-num .order-pageStart{
+	background-color: #2db7f5;
+	color:#fff;
+}
+.show-order{
+	cursor: pointer;
+}
+.show-order:hover{
+	background-color: #0c949a;
+}
